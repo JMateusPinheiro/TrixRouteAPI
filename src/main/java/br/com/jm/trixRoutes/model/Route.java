@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.google.maps.model.LatLng;
+
 import lombok.Data;
 
 @Data
@@ -14,7 +16,9 @@ public class Route {
 	@Id
 	String id;
 	String name;
-	LocalDate date;
+	Stop origin;
+	Stop destination;
+	LocalDate date = LocalDate.now()	;
 	List<Stop> stops;
-//	List<COORDENADAS> path;
+	List<LatLng> path;
 }

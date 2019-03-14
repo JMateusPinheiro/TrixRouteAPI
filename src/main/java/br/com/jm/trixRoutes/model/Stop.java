@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 public class Stop {
 	String name;
-	Position position;
+	Coords coords = new Coords(0.0,0.0);
 }
